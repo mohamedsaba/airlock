@@ -30,7 +30,8 @@ Thumbs.db
 
 # Airlock Internal Project Artifacts
 # (We keep docs/assets for the README, but ignore internal planning)
-/docs/
+/docs/*
+!/docs/assets/
 /scratch/
 /tests/
 
