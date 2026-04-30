@@ -30,11 +30,7 @@ Thumbs.db
 
 # Airlock Internal Project Artifacts
 # (We keep docs/assets for the README, but ignore internal planning)
-docs/BLUEPRINT.md
-docs/PROJECT.md
-docs/marketing/
-docs/phase_*.md
-docs/marketing_plan.md
+/docs/
 /scratch/
 /tests/
 
