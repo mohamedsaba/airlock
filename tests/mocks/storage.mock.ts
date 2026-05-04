@@ -32,7 +32,7 @@ export class MockStorageAdapter implements IStorageAdapter {
     return claimable;
   }
 
-  async markProcessed(id: string, workerId: string): Promise<void> {
+  async markProcessed(id: string, _workerId: string): Promise<void> {
     await this.simulate();
     const m = this.messages.find(msg => msg.id === id);
     if (m) {
@@ -41,7 +41,7 @@ export class MockStorageAdapter implements IStorageAdapter {
     }
   }
 
-  async scheduleRetry(id: string, workerId: string, nextRetryAt: Date, errorReason: string, maxRetries: number): Promise<void> {
+  async scheduleRetry(id: string, _workerId: string, nextRetryAt: Date, errorReason: string, maxRetries: number): Promise<void> {
     await this.simulate();
     const m = this.messages.find(msg => msg.id === id);
     if (m) {
@@ -57,7 +57,7 @@ export class MockStorageAdapter implements IStorageAdapter {
     }
   }
 
-  async insertMessage(message: Partial<AirLockMessage>, transactionManager: any): Promise<string> {
+  async insertMessage(message: Partial<AirLockMessage>, _transactionManager: any): Promise<string> {
     const fullMsg = {
       ...message,
       id: message.id || Math.random().toString(36).substring(7),
