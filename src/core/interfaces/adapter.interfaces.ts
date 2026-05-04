@@ -6,10 +6,12 @@ export interface IStorageAdapter {
   scheduleRetry(
     id: string,
     workerId: string,
-    nextRetryAt: Date,
+    nextRetryAt: Date, // Kept for legacy support if needed, but retryDelayMs is preferred
     errorReason: string,
     maxRetries: number,
+    retryDelayMs?: number,
   ): Promise<void>;
+  pruneProcessedMessages(retentionDays: number, chunkSize: number): Promise<number>;
   insertMessage(
     message: Partial<AirLockMessage>,
     transactionManager: any,

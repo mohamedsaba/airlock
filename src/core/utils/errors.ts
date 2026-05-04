@@ -22,4 +22,8 @@ export class PayloadTooLargeError extends AirLockError {
     super(`Payload size ${size} exceeds limit of ${limit} bytes`);
   }
 }
-
+export class BrokerTimeoutError extends AirLockError {
+  constructor(message: string = 'Broker publish timed out') {
+    super(message);
+  }
+}

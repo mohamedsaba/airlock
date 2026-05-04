@@ -7,7 +7,7 @@
 
 In distributed systems, the most dangerous line of code is the one between your database update and your event publish. If the network blips or your broker is slow, you lose data. This is the **Dual-Write Problem**.
 
-**Airlock** is a production-grade Transactional Outbox library for NestJS. It ensures that your database and your message broker (Kafka, RabbitMQ, etc.) stay in perfect sync by making event publishing an atomic part of your business transaction.
+**Airlock** is a production-grade Transactional Outbox library for NestJS. It ensures that your database and your message broker (Kafka, RabbitMQ, etc.) stay in perfect sync by making event publishing an atomic part of your business transaction. Supports **TypeORM** and **Prisma**.
 
 ---
 
@@ -162,8 +162,8 @@ AirlockModule.forRootAsync({
 ---
 
 ## 🗺️ Roadmap
-- **Phase 0 (Current)**: Postgres foundation, TypeORM, Claim-Lease flow.
-- **Phase 1**: Kafka/RabbitMQ adapters, Exponential Backoff, DLQ, GC.
+- **Phase 0**: Postgres foundation, TypeORM, Claim-Lease flow. (Done)
+- **Phase 1**: Kafka/RabbitMQ adapters, Exponential Backoff, DLQ, GC, Prisma. (Done)
 - **Phase 2**: FIFO Ordering (Advisory Locks), Prometheus Metrics, OpenTelemetry.
 - **Phase 3**: Postgres LISTEN/NOTIFY (Push mode), MongoDB Adapter, Admin UI.
 
