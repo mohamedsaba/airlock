@@ -114,7 +114,7 @@ export class RelayWorker {
         let event;
         try {
           event = typeof msg.payload === 'string' ? JSON.parse(msg.payload) : msg.payload;
-        } catch (e) {
+        } catch {
           throw new PoisonPillError(`Failed to parse payload for message ${msg.id}`);
         }
 

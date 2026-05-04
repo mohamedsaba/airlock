@@ -1,5 +1,5 @@
 import * as crypto from 'crypto';
-// @ts-ignore - Prisma might not be fully generated in this environment
+// @ts-expect-error - Prisma might not be fully generated in this environment
 import { Prisma } from '@prisma/client';
 import { IStorageAdapter } from '../../../core/interfaces/adapter.interfaces';
 import { AirLockMessage } from '../../../core/interfaces/airlock-types.interface';
