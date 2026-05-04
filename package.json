@@ -1,6 +1,6 @@
 {
   "name": "@mohamedsaba/airlock",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Production-ready Transactional Outbox library for NestJS and Node.js. Guarantees at-least-once event delivery with claim-lease mechanics.",
   "author": "Mohamed Saba",
   "license": "MIT",
