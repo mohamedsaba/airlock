@@ -33,7 +33,6 @@ Thumbs.db
 /docs/*
 !/docs/assets/
 /scratch/
-/tests/
 
 # Build and package
 .npm
